@@ -1,0 +1,12 @@
+__pycache__/
+*.pyc
+.venv/
+venv/
+.env
+.env.*
+
+# Personal search state and output (never commit)
+repo_scraper/
+repo_tracker.csv
+reports/
+.claude/settings.local.json

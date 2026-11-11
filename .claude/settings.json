@@ -1,0 +1,48 @@
+{
+  "permissions": {
+    "allow": [
+      "Skill(repo-search-assistant)",
+      "Bash(python .agents/skills/github-search/cli/gh_search.py:*)",
+      "Bash(python3 .agents/skills/github-search/cli/gh_search.py:*)",
+      "Bash(python tools/readme_guard.py:*)",
+      "Bash(python3 tools/readme_guard.py:*)",
+      "Bash(python tools/repo_state.py:*)",
+      "Bash(python3 tools/repo_state.py:*)",
+      "Bash(python tools/html_report.py:*)",
+      "Bash(python3 tools/html_report.py:*)",
+      "Write(repo_scraper/tmp/**)",
+      "Write(reports/**)",
+      "Edit(reports/**)"
+    ],
+    "ask": [
+      "Edit(.claude/settings.json)",
+      "Edit(.claude/settings.local.json)",
+      "Edit(.claude/commands/*.md)",
+      "Edit(.claude/agents/**)",
+      "Edit(tools/**)",
+      "Edit(.agents/**)",
+      "Bash(gh repo fork:*)",
+      "Bash(gh repo clone:*)",
+      "Bash(gh api -X:*)",
+      "Bash(gh api --method:*)",
+      "Bash(git push:*)"
+    ],
+    "deny": [
+      "Read(.env)",
+      "Read(.env.*)",
+      "Read(~/.ssh/**)",
+      "Read(~/.aws/**)",
+      "Read(~/.config/gh/**)",
+      "Bash(gh auth token:*)",
+      "Bash(curl -d:*)",
+      "Bash(curl --data:*)",
+      "Bash(curl -F:*)",
+      "Bash(curl -X POST:*)",
+      "Bash(curl --upload-file:*)",
+      "Bash(wget --post-data:*)",
+      "Bash(scp:*)",
+      "Bash(ssh:*)",
+      "Bash(nc:*)"
+    ]
+  }
+}
